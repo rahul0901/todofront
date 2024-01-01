@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Epilogue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.screen {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    /* border: 1px solid; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFDD0;
+}
+
+.screen>h1 {
+    /* border: 1px solid; */
+    height: 10%;
+    text-align: center;
+    padding-top: 10px;
+    /* font-family: 'Alegreya Sans', sans-serif; */
+}
+
+.screen>form {
+    width: 70%;
+    height: 6%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.screen>form>label,
+input {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 14px;
+}
+
+.screen>form>label:nth-child(1) {
+    font-weight: 600;
+}
+
+.screen>form>label:nth-child(2) {
+    display: none;
+}
+
+.screen>form>:nth-child(3) {
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25%,
+    75% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.shakeOnEmptySubmit {
+    animation: shake 0.5s;
+}
+
+.screen>form>:nth-child(4) {
+    background-color: #007c71;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.screen>form>:nth-child(4):hover {
+    transform: scale(1.2);
+}
+
+.main-todo {
+    /* border: 1px solid blue; */
+    width: 90%;
+    height: 65%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.main-todo::-webkit-scrollbar {
+    display: none;
+}
+
+.single-todos {
+    position: relative;
+    height: 70%;
+    flex: 0 0 calc(30% - 6px);
+    /* ye flex se agar 50 rakehega toh 2 col hoga 3 se 3 col asa use hai iska.. */
+    max-width: calc(80% - 10px);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    background-color: rgb(225, 179, 179);
+    padding: 10px;
+    border-radius: 8px;
+    animation: comingUp 2s ease-out;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+@keyframes comingUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(-50%);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.single-todos::-webkit-scrollbar {
+    display: none;
+}
+
+.single-todos>button {
+    margin-top: 6px;
+    position: sticky;
+    bottom: 0;
+    /* left: 0; */
+}
+
+.single-todos>button>i {
+    padding: 12px 4px;
+}
+
+.single-todos>button>i:hover {
+    animation: shake 0.5s ease-in-out;
+    color: red;
+}
+
+.screen>:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 9%;
+}

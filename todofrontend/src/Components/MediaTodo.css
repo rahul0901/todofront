@@ -1,0 +1,70 @@
+@media screen and (max-width:899px) {
+    .main-todo {
+        /* border: 1px solid blue; */
+        width: 97%;
+    }
+
+    .single-todos {
+        flex: 0 0 calc(32% - 10px);
+        /* ye flex se agar 50 rakehega toh 2 col hoga 3 se 3 col asa use hai iska.. */
+        max-width: calc(70% - 10px);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .screen {
+        width: 100%;
+    }
+
+    .screen>form {
+        width: 90%;
+    }
+
+    .single-todos {
+        flex: 0 0 calc(50% - 10px);
+        /* ye flex se agar 50 rakehega toh 2 col hoga 3 se 3 col asa use hai iska.. */
+        max-width: calc(90% - 10px);
+    }
+
+}
+
+@media screen and (max-width:450px) {
+
+    .screen {
+        width: 100%;
+    }
+
+    .screen>form {
+        width: 100%;
+    }
+
+    .single-todos {
+        flex: 0 0 calc(100% - 10px);
+        /* ye flex se agar 50 rakehega toh 2 col hoga 3 se 3 col asa use hai iska.. */
+        max-width: calc(100% - 10px);
+    }
+
+    .screen>form {
+        width: 100%;
+        margin: auto;
+    }
+
+    .screen>form>label,
+    input {
+        margin-left: 10px;
+    }
+
+    .screen>form>label:nth-child(2) {
+        display: flex;
+        align-items: center;
+    }
+
+    .screen>form>label:nth-child(1) {
+        display: none;
+    }
+
+    .screen>form>:nth-child(4) {
+        padding: 0px 6px;
+    }
+
+}
