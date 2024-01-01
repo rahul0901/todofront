@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 import './Todo.css';
 import './MediaTodo.css'
+import api from "../Helpers/Axios.Config";
 
 function Todo() {
 
@@ -53,7 +54,7 @@ function Todo() {
             // ek naya obj bnayega idhr pe usme phele usestate se saab detail 
             try {
 
-                const response = await axios.post('http://localhost:8000/api/v1/todo/getTodo', { finalGetTodo: todo })
+                const response = await api.post('/todo/getTodo', { finalGetTodo: todo })
 
                 console.log(response.data, 'respodata')
 
@@ -102,7 +103,7 @@ function Todo() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8000/api/v1/todo/${id}`);
+            const response = await api.delete(`/todo/${id}`);
 
             if (response.data.success) {
                 const updatedTodos = newTodo.filter((item) => item._id !== id);
