@@ -90,17 +90,6 @@ function Todo() {
         }
     }
 
-    // const handleDelete = async (id) => {
-    //     // try {
-    //     //     // Add logic here to delete todo using axios
-    //     //   } catch (error) {
-    //     //     toast.error(error.message);
-    //     //   }
-    //     const updatedToDo = [...newTodo];
-    //     updatedToDo.splice(index, 1);
-    //     setNewTodo(updatedToDo)
-    // }
-
     const handleDelete = async (id) => {
         try {
             const response = await api.delete(`/todo/${id}`);
