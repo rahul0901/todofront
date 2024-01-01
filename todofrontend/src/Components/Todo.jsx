@@ -113,7 +113,7 @@ function Todo() {
 
     const getRandomColor = () => {
         // '#FAD02E', '#66BB6A', '#2196F3', '#FF9800', '#E91E63',
-        const colors = ['#F2E8CF', '#7ECEA1', '#ffc514', '#CD8576', '#FF9696', '#DDA6C3'];
+        const colors = ['#F2E8CF', '#7ECEA1', '#ffc514', '#CD8576', '#FF9696', '#DDA6C3', '#FFFFFF'];
         return colors[Math.floor(Math.random() * colors.length)];
     }
 
